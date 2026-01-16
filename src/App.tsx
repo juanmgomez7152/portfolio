@@ -2,6 +2,8 @@ import Plasma from "./components/Plasma";
 import LogoLoop from "./components/LogoLoop";
 import techLogos from "./assets/tech-stack";
 import TextType from "./components/TextType";
+import ProfileCard from "./components/ProfileCard";
+import ElectricBorder from "./components/ElectricBorder";
 
 function App() {
   return (
@@ -9,29 +11,23 @@ function App() {
       aria-label="Entry Point"
       style={{
         background: "black",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
+        height: "100vh",
+        overflowY: "scroll",
+        // scrollSnapType: "y mandatory",
       }}
     >
       <div
         aria-label="Background"
         style={{
           width: "100%",
-          height: "100vh",
           position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
           color: "white",
         }}
       >
         <div
           aria-label="Plasma Background Div"
           style={{
-            position: "absolute",
+            position: "fixed",
             top: 0,
             left: 0,
             width: "100%",
@@ -48,45 +44,129 @@ function App() {
             mouseInteractive={true}
           />
         </div>
+
+        {/* Section 1: Welcome Text */}
         <div
-          aria-label="Portfolio Content"
+          aria-label="Welcome Text Section"
           style={{
+            height: "100vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             position: "relative",
             zIndex: 1,
+            scrollSnapAlign: "start",
           }}
         >
           <div
-            aria-label="Welcome Text"
             style={{
-              fontSize: "200%",
-              justifyContent: "center",
-              alignItems: "center",
+              fontSize: "300%",
+              fontWeight: "bold",
             }}
           >
             <TextType
-              text={["Welcome!", "This is Juan's Portfolio"]}
+              text={["Welcome to Juan's Portfolio"]}
               typingSpeed={75}
-              pauseDuration={1500}
+              pauseDuration={3000}
               showCursor={true}
               cursorCharacter="|"
+              loop={true}
             />
           </div>
         </div>
+
+        {/* Section 2: Summary & Picture */}
         <div
-          aria-label="Technical Skills Loop"
+          aria-label="Summary Section"
           style={{
-            height: "100px",
-            position: "absolute",
-            overflow: "hidden",
-            left: 0,
-            right: 0,
+            height: "100vh",
             display: "flex",
-            bottom: "5px",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            zIndex: 1,
+            scrollSnapAlign: "start",
+            padding: "20px",
           }}
         >
+          <div
+            style={{
+              fontSize: "100%",
+              display: "flex",
+              flexDirection: "row",
+              gap: "40px",
+              maxWidth: "1200px",
+              width: "100%",
+              alignItems: "stretch",
+            }}
+          >
+            <ElectricBorder
+            chaos={.1}
+            style={{ flex: "1 1 500px", maxWidth: "600px" }}
+            >
+              <div>
+                <div
+                  style={{
+                    fontSize: "200%",
+                    fontWeight: "bold",
+                    textDecoration: "underline",
+                    marginBottom: "20px",
+                  }}
+                >
+                  Who am I?
+                </div>
+                <p style={{ margin: "6px 0 0", opacity: 0.8 }}>
+                  Hello my name is Juan Gomez Guzman and I am a Senior Software
+                  Engineer currently solving complex problems at Visa Inc. using
+                  GenAI
+                </p>
+              </div>
+            </ElectricBorder>
+
+            {/* ProfileCard */}
+            <div style={{ flex: "0 0 auto" }}>
+              <ProfileCard
+                name="Juan M. Gomez Guzman"
+                title="Sr.Software Engineer - Visa Inc."
+                handle="hello_world"
+                status="Reach Out!"
+                contactText="Contact Me"
+                avatarUrl="src/assets/profesional_picture.jpeg"
+                iconUrl="src/assets/hash-svgrepo-com.svg"
+                behindGlowColor="rgba(0, 229, 255, 0.2)"
+                showUserInfo={false}
+                enableTilt={true}
+                enableMobileTilt={false}
+                onContactClick={() => console.log("Contact clicked")}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Section 3: Technical Skills */}
+        <div
+          aria-label="Technical Skills Section"
+          style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            zIndex: 1,
+            scrollSnapAlign: "start",
+            flexDirection: "column",
+          }}
+        >
+          <div
+            style={{
+              fontWeight: "bold",
+              fontSize: "125%",
+              textDecoration: "underline",
+              marginBottom: "20px",
+            }}
+          >
+            Technical Skills
+          </div>
           <LogoLoop
             logos={techLogos}
             speed={120}
