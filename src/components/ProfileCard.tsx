@@ -53,8 +53,8 @@ const ProfileCardComponent: React.FC<ProfileCardProps> = ({
   miniAvatarUrl,
   name = 'Javi A. Torres',
   title = 'Software Engineer',
-  handle = 'javicodes',
-  status = 'Online',
+  handle = '',
+  status = '',
   contactText = 'Contact',
   showUserInfo = true,
   onContactClick

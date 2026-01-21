@@ -16,7 +16,6 @@ export default function SummarySection() {
           alignItems: "stretch",
         }}
       >
-        {/* Summary Card */}
         <ElectricBorder
           chaos={0.1}
           style={{ flex: "1 1 500px", maxWidth: "600px" }}
@@ -24,13 +23,13 @@ export default function SummarySection() {
           <div>
             <div
               style={{
-                fontSize: "200%",
+                fontSize: "300%",
                 fontWeight: "bold",
                 textDecoration: "underline",
                 marginBottom: "20px",
               }}
             >
-              Who am I?
+              About Me
             </div>
             <p style={{ margin: "6px 0 0", opacity: 0.8 }}>
               Hello my name is Juan Gomez Guzman and I am a Senior Software
@@ -39,8 +38,6 @@ export default function SummarySection() {
             </p>
           </div>
         </ElectricBorder>
-
-        {/* ProfileCard */}
         <div style={{ flex: "0 0 auto" }}>
           <ProfileCard
             name="Juan M. Gomez Guzman"

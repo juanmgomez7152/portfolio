@@ -5,28 +5,9 @@ import WorkExperienceSection from "./components/sections/WorkExperienceSection";
 import ProjectSection from "./components/sections/ProjectsSection";
 import TechnicalSkillsSection from "./components/sections/TechnicalSkillsSection";
 import StaggeredMenu from "./components/StaggeredMenu";
+import CommentsSection from "./components/sections/CommentsSection";
 import { useEffect } from "react";
-
-const menuItems = [
-  {
-    label: "Welcome",
-    ariaLabel: "Go to welcome section",
-    link: "#intro",
-  },
-  { label: "About", ariaLabel: "Learn about me", link: "#summary" },
-  {
-    label: "Experience",
-    ariaLabel: "View our my work experience",
-    link: "#experience",
-  },
-  { label: "Projects", ariaLabel: "Get in touch", link: "#projects" },
-  { label: "Skills", ariaLabel: "View my skills", link: "#skills" },
-];
-const socialItems = [
-  { label: "GitHub", link: "https://github.com/juanmgomez7152" },
-  { label: "LinkedIn", link: "https://www.linkedin.com/in/jmgomezguzman7/" },
-  { label: "Email", link: "mailto:juan.m.gomez7152@gmail.com" },
-];
+import { socialItems, menuItems } from "./assets/MenuItems";
 
 function App() {
   useEffect(() => {
@@ -56,7 +37,6 @@ function App() {
         height: "100vh",
         overflowY: "scroll",
         position: "relative",
-        scrollSnapType: "y mandatory",
       }}
     >
       <div
@@ -100,6 +80,9 @@ function App() {
       </section>
       <section id="skills">
         <TechnicalSkillsSection />
+      </section>
+      <section id="dev-comments">
+        <CommentsSection/>
       </section>
     </div>
   );

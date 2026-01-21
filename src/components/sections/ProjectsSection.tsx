@@ -90,7 +90,10 @@ export default function ProjectSection() {
                 • Led a multidisciplinary team of ECE & MECE seniors to create a
                 prototype to provide quality control and standardization to a
                 process in the natural gas meter production, project sponsored
-                by Dresser Utility Solution with a $40,000 budget. • Implemented
+                by Dresser Utility Solution with a $40,000 budget. 
+                <br/>
+                <br/>
+                • Implemented
                 FreeRTOS on an Arduino DUE to simultaneously handle tasks like
                 actuator management (load cell feedback sys.), safety button
                 protocol (standard in Industrial equip.), and ultrasonic
