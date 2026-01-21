@@ -32,9 +32,19 @@ export default function SummarySection() {
               About Me
             </div>
             <p style={{ margin: "6px 0 0", opacity: 0.8 }}>
-              Hello my name is Juan Gomez Guzman and I am a Senior Software
-              Engineer currently solving complex problems at Visa Inc. using
-              GenAI
+              Hello, my name is Juan Gomez Guzman, and I am a Senior Software
+              Engineer at Visa Inc., where I deploy GenAI solutions
+              at scale across the enterprise. I hold a Bachelor's degree in Electrical Engineering 
+              (Computer & Embedded Systems) from The University of Houston and have completed 
+              internships across diverse industries including biotech, oil & gas, and banking.
+            </p>
+            <br/>
+            <br/>
+            <p>
+              What drives my passion for software engineering is the very thing that challenges 
+              others—the complexity. I'm drawn to seemingly insurmountable problems, and this 
+              pursuit of difficult challenges has defined my journey through personal, professional, 
+              and academic endeavors. I thrive in environments where innovation meets adversity.
             </p>
           </div>
         </ElectricBorder>
