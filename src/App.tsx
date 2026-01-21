@@ -4,16 +4,24 @@ import techLogos from "./assets/tech-stack";
 import TextType from "./components/TextType";
 import ProfileCard from "./components/ProfileCard";
 import ElectricBorder from "./components/ElectricBorder";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./components/carousel";
 
 function App() {
   return (
     <div
       aria-label="Entry Point"
+      className="dark"
       style={{
         background: "black",
         height: "100vh",
         overflowY: "scroll",
-        // scrollSnapType: "y mandatory",
+        scrollSnapType: "y mandatory",
       }}
     >
       <div
@@ -37,14 +45,13 @@ function App() {
         >
           <Plasma
             color="#2F4F6F"
-            speed={0.6}
+            speed={1}
             direction="forward"
-            scale={1.1}
-            opacity={0.8}
+            scale={1.3}
+            opacity={1}
             mouseInteractive={true}
           />
         </div>
-
         {/* Section 1: Welcome Text */}
         <div
           aria-label="Welcome Text Section"
@@ -74,7 +81,6 @@ function App() {
             />
           </div>
         </div>
-
         {/* Section 2: Summary & Picture */}
         <div
           aria-label="Summary Section"
@@ -100,9 +106,10 @@ function App() {
               alignItems: "stretch",
             }}
           >
+            {/* Summary Card */}
             <ElectricBorder
-            chaos={.1}
-            style={{ flex: "1 1 500px", maxWidth: "600px" }}
+              chaos={0.1}
+              style={{ flex: "1 1 500px", maxWidth: "600px" }}
             >
               <div>
                 <div
@@ -142,10 +149,9 @@ function App() {
             </div>
           </div>
         </div>
-
-        {/* Section 3: Technical Skills */}
+        {/* Section 3: Work Experience */}
         <div
-          aria-label="Technical Skills Section"
+          aria-label="Work Experience Section"
           style={{
             height: "100vh",
             display: "flex",
@@ -155,14 +161,335 @@ function App() {
             zIndex: 1,
             scrollSnapAlign: "start",
             flexDirection: "column",
+            padding: "20px",
           }}
         >
           <div
             style={{
               fontWeight: "bold",
-              fontSize: "125%",
+              fontSize: "250%",
               textDecoration: "underline",
-              marginBottom: "20px",
+              marginBottom: "40px",
+            }}
+          >
+            Work Experience
+          </div>
+          <Carousel className="w-full max-w-4xl">
+            <CarouselContent>
+              <CarouselItem>
+                <div
+                  style={{
+                    padding: "40px",
+                    textAlign: "left",
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "bolder",
+                      fontSize: "150%",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Senior Software Engineer - People Technology
+                  </h1>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                      textDecoration: "underline",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <i>Visa Inc. (Jan 2026 - Present)</i>
+                  </h2>
+                  <p style={{ lineHeight: "1.6" }}>
+                    • Major codebase refactor on a crucial data pipeline that
+                    tracks teams project progress which now runs 68.75% more
+                    efficient, being able to manage 14,000 artifacts in 2.5
+                    hours instead of 8 hours.
+                    <br />
+                    <br />
+                    • Developed and maintained the Agile Tooling Framework,
+                    which consisted of 2 applications, an ETL pipeline and a
+                    full-stack application. This tooling framework has shown to
+                    improve the way teams work enterprise-wide, improving
+                    efficiency and accuracy. Applied Technologies: Angular 17,
+                    Python, GenAI APIs.
+                    <br />
+                    <br />• Implemented CI/CD pipelines on the Visa cloud
+                    platform to streamline and standardize deployment processes,
+                    enabling adoption across multiple teams while also ensuring
+                    applications meet some of the strictest cybersecurity
+                    standards in the FinTech industry
+                  </p>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div
+                  style={{
+                    padding: "40px",
+                    textAlign: "left",
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "bolder",
+                      fontSize: "150%",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Software Engineer - Agile Optimization Team
+                  </h1>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                      textDecoration: "underline",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <i>Visa Inc. (Jan 2024 - Jan 2026)</i>
+                  </h2>
+                  <p style={{ lineHeight: "1.6" }}>
+                    • Major codebase refactor on a crucial data pipeline that
+                    tracks teams project progress which now runs 68.75% more
+                    efficient, being able to manage 14,000 artifacts in 2.5
+                    hours instead of 8 hours.
+                    <br />
+                    <br />
+                    • Developed and maintained the Agile Tooling Framework,
+                    which consisted of 2 applications, an ETL pipeline and a
+                    full-stack application. This tooling framework has shown to
+                    improve the way teams work enterprise-wide, improving
+                    efficiency and accuracy. Applied Technologies: Angular 17,
+                    Python, GenAI APIs.
+                    <br />
+                    <br />• Implemented CI/CD pipelines on the Visa cloud
+                    platform to streamline and standardize deployment processes,
+                    enabling adoption across multiple teams while also ensuring
+                    applications meet some of the strictest cybersecurity
+                    standards in the FinTech industry
+                  </p>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div
+                  style={{
+                    padding: "40px",
+                    textAlign: "left",
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "bolder",
+                      fontSize: "150%",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Embedding Engineering - Intern
+                  </h1>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                      textDecoration: "underline",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <i>Cooper Consulting Service (Sept 2023 - Dec 2023)</i>
+                  </h2>
+                  <p style={{ lineHeight: "1.6" }}>
+                    • Leading a project for a Texas Children’s Hospital M.D.,
+                    with minimal guidance, on a proof of concept to measure ICP
+                    (Increased Intracranial Pressure) with a new innovative
+                    approach.
+                    <br />
+                    <br />• Tested prototypes at various pressures to ensure a
+                    valid algorithm, upon discovering discrepancies,
+                    collaborated with embedded engineers to calculate corrected
+                    constants on a 5th order polynomial that affects the
+                    algorithm for successful operation.
+                  </p>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div
+                  style={{
+                    padding: "40px",
+                    textAlign: "left",
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "bolder",
+                      fontSize: "150%",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Software Engineer - Intern
+                  </h1>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                      textDecoration: "underline",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <i>Citibank (June 2023 - August 2023)</i>
+                  </h2>
+                  <p style={{ lineHeight: "1.6" }}>
+                    • Worked on the Retail API team and specialized on
+                    microservices that supported other CITI dev teams to
+                    request/retrieve information on customer accounts
+                    <br />
+                    <br />• Led my internship project; A full stack project to
+                    create a dashboard UI that can receive an FID, which will be
+                    passed to a microservice that will in turn query the FID
+                    request from the database. Applied technologies such as:
+                    MongoDB, Oracle SQL, HTML, Java, Java Spring Boot Framework.
+                  </p>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+        {/* Projects */}
+        <div
+          aria-label="Project Section"
+          style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            zIndex: 1,
+            scrollSnapAlign: "start",
+            flexDirection: "column",
+            padding: "20px",
+          }}
+        >
+          <div
+            style={{
+              fontWeight: "bold",
+              fontSize: "250%",
+              textDecoration: "underline",
+              marginBottom: "40px",
+            }}
+          >
+            Projects
+          </div>
+          <Carousel className="w-full max-w-4xl" opts={{ loop: true }}>
+            <CarouselContent>
+              <CarouselItem>
+                <div
+                  style={{
+                    padding: "40px",
+                    textAlign: "left",
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "bolder",
+                      fontSize: "150%",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Paramiguel.org
+                  </h1>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                      textDecoration: "underline",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <i>Personal (May 2024 - Present)</i>
+                  </h2>
+                  <p style={{ lineHeight: "1.6" }}>
+                    • GenAI based language interpreter that tailors the
+                    translation response not only based on the language of a
+                    country but also using the word interpretation of the
+                    language in chosen country (e.g. Different countries in
+                    Latin America use different words for drinking straw).
+                    Applied technologies such as: Angular 20, Python, React.
+                  </p>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div
+                  style={{
+                    padding: "40px",
+                    textAlign: "left",
+                    maxWidth: "800px",
+                    margin: "0 auto",
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontWeight: "bolder",
+                      fontSize: "150%",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Senior Capstone Project
+                  </h1>
+                  <h2
+                    style={{
+                      fontWeight: "bold",
+                      textDecoration: "underline",
+                      marginBottom: "20px",
+                    }}
+                  >
+                    <i>University of Houston (Jan 2023 - Dec 2023)</i>
+                  </h2>
+                  <p style={{ lineHeight: "1.6" }}>
+                    • Led a multidisciplinary team of ECE & MECE seniors to
+                    create a prototype to provide quality control and
+                    standardization to a process in the natural gas meter
+                    production, project sponsored by Dresser Utility Solution
+                    with a $40,000 budget. • Implemented FreeRTOS on an Arduino
+                    DUE to simultaneously handle tasks like actuator management
+                    (load cell feedback sys.), safety button protocol (standard
+                    in Industrial equip.), and ultrasonic distance sensors
+                    (object interference detection).
+                  </p>
+                </div>
+              </CarouselItem>
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+        </div>
+        {/* Last Section: Technical Skills */}
+        <div
+          aria-label="Project Section"
+          style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            position: "relative",
+            zIndex: 1,
+            scrollSnapAlign: "start",
+            flexDirection: "column",
+            padding: "20px",
+          }}
+        >
+          <div
+            style={{
+              fontWeight: "bold",
+              fontSize: "250%",
+              textDecoration: "underline",
+              marginBottom: "40px",
             }}
           >
             Technical Skills
