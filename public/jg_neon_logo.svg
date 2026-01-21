@@ -24,18 +24,18 @@
     <!-- Outer hexagon -->
     <polygon points="400,80 620,205 620,395 400,520 180,395 180,205" 
              fill="none" 
-             stroke="#FF6B6B" 
+             stroke="#2F4F6F" 
              stroke-width="3"/>
     
     <!-- Inner hexagon -->
     <polygon points="400,110 590,220 590,380 400,490 210,380 210,220" 
              fill="none" 
-             stroke="#FF6B6B" 
+             stroke="#2F4F6F" 
              stroke-width="2"/>
   </g>
   
   <!-- Connection lines from corners to center -->
-  <g filter="url(#glow)" stroke="#FF6B6B" stroke-width="1.5" fill="none">
+  <g filter="url(#glow)" stroke="#2F4F6F" stroke-width="1.5" fill="none">
     <line x1="400" y1="80" x2="400" y2="200"/>
     <line x1="620" y1="205" x2="480" y2="260"/>
     <line x1="620" y1="395" x2="480" y2="340"/>
@@ -46,75 +46,75 @@
   
   <!-- Circuit nodes at hexagon corners -->
   <g filter="url(#strongGlow)">
-    <circle cx="400" cy="80" r="5" fill="#FF6B6B"/>
-    <circle cx="620" cy="205" r="5" fill="#FF6B6B"/>
-    <circle cx="620" cy="395" r="5" fill="#FF6B6B"/>
-    <circle cx="400" cy="520" r="5" fill="#FF6B6B"/>
-    <circle cx="180" cy="395" r="5" fill="#FF6B6B"/>
-    <circle cx="180" cy="205" r="5" fill="#FF6B6B"/>
+    <circle cx="400" cy="80" r="5" fill="#2F4F6F"/>
+    <circle cx="620" cy="205" r="5" fill="#2F4F6F"/>
+    <circle cx="620" cy="395" r="5" fill="#2F4F6F"/>
+    <circle cx="400" cy="520" r="5" fill="#2F4F6F"/>
+    <circle cx="180" cy="395" r="5" fill="#2F4F6F"/>
+    <circle cx="180" cy="205" r="5" fill="#2F4F6F"/>
   </g>
   
   <!-- Code brackets on sides - OUTSIDE hexagon -->
-  <g filter="url(#strongGlow)" stroke="#FF6B6B" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g filter="url(#strongGlow)" stroke="#2F4F6F" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round">
     <!-- Left bracket < -->
     <polyline points="170,220 110,300 170,380"/>
-    <circle cx="135" cy="235" r="5" fill="#FF6B6B"/>
-    <circle cx="135" cy="365" r="5" fill="#FF6B6B"/>
-    <circle cx="110" cy="300" r="5" fill="#FF6B6B"/>
+    <circle cx="135" cy="235" r="5" fill="#2F4F6F"/>
+    <circle cx="135" cy="365" r="5" fill="#2F4F6F"/>
+    <circle cx="110" cy="300" r="5" fill="#2F4F6F"/>
     
     <!-- Right bracket > -->
     <polyline points="630,220 690,300 630,380"/>
-    <circle cx="665" cy="235" r="5" fill="#FF6B6B"/>
-    <circle cx="665" cy="365" r="5" fill="#FF6B6B"/>
-    <circle cx="690" cy="300" r="5" fill="#FF6B6B"/>
+    <circle cx="665" cy="235" r="5" fill="#2F4F6F"/>
+    <circle cx="665" cy="365" r="5" fill="#2F4F6F"/>
+    <circle cx="690" cy="300" r="5" fill="#2F4F6F"/>
   </g>
   
   <!-- Letter J with circuit board style -->
   <g filter="url(#strongGlow)">
     <!-- Main stem with circuit traces -->
-    <path d="M 330 220 L 330 320 Q 330 360, 290 360 Q 250 360, 250 320" 
-          stroke="#FF6B6B" 
+    <path d="M 330 200 L 330 340 Q 330 400, 290 400 Q 250 400, 250 340" 
+          stroke="#2F4F6F" 
           stroke-width="12" 
           fill="none" 
           stroke-linecap="round" 
           stroke-linejoin="round"/>
     
     <!-- Circuit traces inside J -->
-    <line x1="330" y1="240" x2="340" y2="240" stroke="#FF6B6B" stroke-width="3"/>
-    <line x1="330" y1="270" x2="340" y2="270" stroke="#FF6B6B" stroke-width="3"/>
-    <line x1="330" y1="300" x2="340" y2="300" stroke="#FF6B6B" stroke-width="3"/>
+    <line x1="330" y1="230" x2="340" y2="230" stroke="#2F4F6F" stroke-width="3"/>
+    <line x1="330" y1="270" x2="340" y2="270" stroke="#2F4F6F" stroke-width="3"/>
+    <line x1="330" y1="315" x2="340" y2="315" stroke="#2F4F6F" stroke-width="3"/>
     
     <!-- Nodes on J -->
-    <circle cx="330" cy="220" r="6" fill="#FF6B6B"/>
-    <circle cx="340" cy="240" r="3" fill="#FF6B6B"/>
-    <circle cx="340" cy="270" r="3" fill="#FF6B6B"/>
-    <circle cx="340" cy="300" r="3" fill="#FF6B6B"/>
-    <circle cx="250" cy="320" r="6" fill="#FF6B6B"/>
+    <circle cx="330" cy="200" r="6" fill="#2F4F6F"/>
+    <circle cx="340" cy="230" r="3" fill="#2F4F6F"/>
+    <circle cx="340" cy="270" r="3" fill="#2F4F6F"/>
+    <circle cx="340" cy="315" r="3" fill="#2F4F6F"/>
+    <circle cx="250" cy="340" r="6" fill="#2F4F6F"/>
   </g>
   
   <!-- Letter G with circuit board style -->
   <g filter="url(#strongGlow)">
     <!-- Main G shape -->
     <path d="M 530 240 Q 530 200, 480 200 Q 430 200, 430 250 L 430 350 Q 430 400, 480 400 Q 520 400, 530 370 L 530 310 L 490 310" 
-          stroke="#FF6B6B" 
+          stroke="#2F4F6F" 
           stroke-width="12" 
           fill="none" 
           stroke-linecap="round" 
           stroke-linejoin="round"/>
     
     <!-- Circuit traces inside G -->
-    <path d="M 445 250 Q 445 215, 470 215" stroke="#FF6B6B" stroke-width="3" fill="none"/>
-    <path d="M 445 280 L 455 280" stroke="#FF6B6B" stroke-width="3"/>
-    <path d="M 445 320 L 455 320" stroke="#FF6B6B" stroke-width="3"/>
-    <path d="M 445 350 Q 445 385, 470 385" stroke="#FF6B6B" stroke-width="3" fill="none"/>
+    <path d="M 445 250 Q 445 215, 470 215" stroke="#2F4F6F" stroke-width="3" fill="none"/>
+    <path d="M 445 280 L 455 280" stroke="#2F4F6F" stroke-width="3"/>
+    <path d="M 445 320 L 455 320" stroke="#2F4F6F" stroke-width="3"/>
+    <path d="M 445 350 Q 445 385, 470 385" stroke="#2F4F6F" stroke-width="3" fill="none"/>
     
     <!-- Nodes on G -->
-    <circle cx="530" cy="240" r="6" fill="#FF6B6B"/>
-    <circle cx="490" cy="310" r="6" fill="#FF6B6B"/>
-    <circle cx="470" cy="215" r="3" fill="#FF6B6B"/>
-    <circle cx="455" cy="280" r="3" fill="#FF6B6B"/>
-    <circle cx="455" cy="320" r="3" fill="#FF6B6B"/>
-    <circle cx="470" cy="385" r="3" fill="#FF6B6B"/>
+    <circle cx="530" cy="240" r="6" fill="#2F4F6F"/>
+    <circle cx="490" cy="310" r="6" fill="#2F4F6F"/>
+    <circle cx="470" cy="215" r="3" fill="#2F4F6F"/>
+    <circle cx="455" cy="280" r="3" fill="#2F4F6F"/>
+    <circle cx="455" cy="320" r="3" fill="#2F4F6F"/>
+    <circle cx="470" cy="385" r="3" fill="#2F4F6F"/>
   </g>
   
   <!-- Central microchip -->
@@ -122,41 +122,41 @@
     <!-- Chip body -->
     <rect x="385" y="330" width="30" height="30" 
           fill="none" 
-          stroke="#FF6B6B" 
+          stroke="#2F4F6F" 
           stroke-width="3"/>
     
     <!-- Inner detail -->
     <rect x="392" y="337" width="16" height="16" 
-          fill="#FF6B6B"/>
+          fill="#2F4F6F"/>
     
     <!-- Chip pins -->
-    <line x1="385" y1="340" x2="375" y2="340" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="385" y1="350" x2="375" y2="350" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="415" y1="340" x2="425" y2="340" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="415" y1="350" x2="425" y2="350" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="392" y1="330" x2="392" y2="320" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="408" y1="330" x2="408" y2="320" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="392" y1="360" x2="392" y2="370" stroke="#FF6B6B" stroke-width="2"/>
-    <line x1="408" y1="360" x2="408" y2="370" stroke="#FF6B6B" stroke-width="2"/>
+    <line x1="385" y1="340" x2="375" y2="340" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="385" y1="350" x2="375" y2="350" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="415" y1="340" x2="425" y2="340" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="415" y1="350" x2="425" y2="350" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="392" y1="330" x2="392" y2="320" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="408" y1="330" x2="408" y2="320" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="392" y1="360" x2="392" y2="370" stroke="#2F4F6F" stroke-width="2"/>
+    <line x1="408" y1="360" x2="408" y2="370" stroke="#2F4F6F" stroke-width="2"/>
     
     <!-- Pin endpoints -->
-    <circle cx="375" cy="340" r="2" fill="#FF6B6B"/>
-    <circle cx="375" cy="350" r="2" fill="#FF6B6B"/>
-    <circle cx="425" cy="340" r="2" fill="#FF6B6B"/>
-    <circle cx="425" cy="350" r="2" fill="#FF6B6B"/>
-    <circle cx="392" cy="320" r="2" fill="#FF6B6B"/>
-    <circle cx="408" cy="320" r="2" fill="#FF6B6B"/>
-    <circle cx="392" cy="370" r="2" fill="#FF6B6B"/>
-    <circle cx="408" cy="370" r="2" fill="#FF6B6B"/>
+    <circle cx="375" cy="340" r="2" fill="#2F4F6F"/>
+    <circle cx="375" cy="350" r="2" fill="#2F4F6F"/>
+    <circle cx="425" cy="340" r="2" fill="#2F4F6F"/>
+    <circle cx="425" cy="350" r="2" fill="#2F4F6F"/>
+    <circle cx="392" cy="320" r="2" fill="#2F4F6F"/>
+    <circle cx="408" cy="320" r="2" fill="#2F4F6F"/>
+    <circle cx="392" cy="370" r="2" fill="#2F4F6F"/>
+    <circle cx="408" cy="370" r="2" fill="#2F4F6F"/>
   </g>
   
   <!-- Additional circuit nodes scattered around -->
   <g filter="url(#glow)">
-    <circle cx="350" cy="190" r="3" fill="#FF6B6B"/>
-    <circle cx="450" cy="190" r="3" fill="#FF6B6B"/>
-    <circle cx="300" cy="300" r="3" fill="#FF6B6B"/>
-    <circle cx="500" cy="300" r="3" fill="#FF6B6B"/>
-    <circle cx="350" cy="410" r="3" fill="#FF6B6B"/>
-    <circle cx="450" cy="410" r="3" fill="#FF6B6B"/>
+    <circle cx="350" cy="190" r="3" fill="#2F4F6F"/>
+    <circle cx="450" cy="190" r="3" fill="#2F4F6F"/>
+    <circle cx="300" cy="300" r="3" fill="#2F4F6F"/>
+    <circle cx="500" cy="300" r="3" fill="#2F4F6F"/>
+    <circle cx="350" cy="410" r="3" fill="#2F4F6F"/>
+    <circle cx="450" cy="410" r="3" fill="#2F4F6F"/>
   </g>
 </svg>
