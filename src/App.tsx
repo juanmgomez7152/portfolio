@@ -5,9 +5,14 @@ import WorkExperienceSection from "./components/sections/WorkExperienceSection";
 import ProjectSection from "./components/sections/ProjectsSection";
 import TechnicalSkillsSection from "./components/sections/TechnicalSkillsSection";
 import StaggeredMenu from "./components/StaggeredMenu";
+import { useEffect } from "react";
 
 const menuItems = [
-  { label: "Welcome", ariaLabel: "Go to welcome section", link: "#intro" },
+  {
+    label: "Welcome",
+    ariaLabel: "Go to welcome section",
+    link: "#intro",
+  },
   { label: "About", ariaLabel: "Learn about me", link: "#summary" },
   {
     label: "Experience",
@@ -24,6 +29,24 @@ const socialItems = [
 ];
 
 function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            window.history.replaceState(null, "", `#${id}`);
+          }
+        });
+      },
+      { threshold: 0.5 },
+    );
+
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <div
       aria-label="Entry Point"
@@ -38,7 +61,7 @@ function App() {
     >
       <div
         style={{
-          position: 'fixed',
+          position: "fixed",
           top: 0,
           left: 0,
           right: 0,
